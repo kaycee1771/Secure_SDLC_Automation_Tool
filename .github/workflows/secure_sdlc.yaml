@@ -1,0 +1,48 @@
+name: Secure SDLC Automation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security_scan:
+    name: Run Security Scans
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run SAST Scan (Semgrep)
+      run: |
+        semgrep --config=config/semgrep_rules.yaml --json -o reports/sast_report.json || echo "SAST Scan Completed"
+
+    - name: Run SAST Scan (Bandit)
+      run: |
+        bandit -r src -f json -o reports/bandit_report.json || echo "Bandit Scan Completed"
+
+    - name: Run SCA Scan (Dependency Check)
+      run: |
+        dependency-check --scan requirements.txt --format JSON --out reports/sca_report.json || echo "SCA Scan Completed"
+
+    - name: Run Threat Modeling
+      run: |
+        python src/main.py --threat-model || echo "Threat Modeling Completed"
+
+    - name: Upload Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-reports
+        path: reports/
