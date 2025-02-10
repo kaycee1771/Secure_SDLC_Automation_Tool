@@ -1,0 +1,18 @@
+Threat Model: {{ tm.name }}
+=================================
+Description: {{ tm.description }}
+
+Entities:
+{% for e in tm._elements %}
+  - {{ e.name }} (Type: {{ e.__class__.__name__ }})
+{% endfor %}
+
+Data Flows:
+{% for df in tm._dataflows %}
+  - {{ df.name }} ({{ df.source.name }} → {{ df.sink.name }})
+{% endfor %}
+
+Threats Identified:
+{% for t in tm._threats %}
+  - {{ t.name }} | Severity: {{ t.severity }} | Category: {{ t.category | default("Uncategorized") }} | Description: {{ t.description }}
+{% endfor %}

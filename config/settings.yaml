@@ -1,0 +1,21 @@
+
+sca:
+  enabled: true
+  tool: "dependency-check"
+  report_format: "JSON"
+  output_file: "reports/sca_report.json"
+  scan_target: "requirements.txt"
+  nvd_api_key: "842bfda1-92e0-467a-80e5-4086460bf7c4"
+
+
+threat_modeling:
+  enabled: true
+  tool: "pytm"
+  output_file: "reports/threat_model_report.txt"
+
+sast:
+  enabled: true
+  tool: "bandit"  # Change this to "bandit"
+  bandit_config_path: "config/bandit.yaml"
+  output_format: "json"
+

@@ -1,0 +1,235 @@
+{
+    "sast_bandit": {
+        "errors": [],
+        "generated_at": "2025-02-06T00:37:11Z",
+        "metrics": {
+            "_totals": {
+                "CONFIDENCE.HIGH": 2,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 2,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 62,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\init.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\main.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 25,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\sast\\init.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\sast\\sast_scan.py": {
+                "CONFIDENCE.HIGH": 2,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 2,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 18,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\sca\\init.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\sca\\sca_scan.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 2,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\threat_modelling\\init.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\threat_modelling\\threat_model.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 2,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\utils\\config.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\utils\\init.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 0,
+                "nosec": 0,
+                "skipped_tests": 0
+            },
+            "src\\utils\\logger.py": {
+                "CONFIDENCE.HIGH": 0,
+                "CONFIDENCE.LOW": 0,
+                "CONFIDENCE.MEDIUM": 0,
+                "CONFIDENCE.UNDEFINED": 0,
+                "SEVERITY.HIGH": 0,
+                "SEVERITY.LOW": 0,
+                "SEVERITY.MEDIUM": 0,
+                "SEVERITY.UNDEFINED": 0,
+                "loc": 15,
+                "nosec": 0,
+                "skipped_tests": 0
+            }
+        },
+        "results": [
+            {
+                "code": "1 import subprocess\n2 import os\n3 from utils.logger import logger\n",
+                "col_offset": 0,
+                "end_col_offset": 17,
+                "filename": "src\\sast\\sast_scan.py",
+                "issue_confidence": "HIGH",
+                "issue_cwe": {
+                    "id": 78,
+                    "link": "https://cwe.mitre.org/data/definitions/78.html"
+                },
+                "issue_severity": "LOW",
+                "issue_text": "Consider possible security implications associated with the subprocess module.",
+                "line_number": 1,
+                "line_range": [
+                    1
+                ],
+                "more_info": "https://bandit.readthedocs.io/en/1.8.2/blacklists/blacklist_imports.html#b404-import-subprocess",
+                "test_id": "B404",
+                "test_name": "blacklist"
+            },
+            {
+                "code": "14         logger.info(f\"Executing: {' '.join(cmd)}\")\n15         subprocess.run(cmd, check=True)\n16 \n",
+                "col_offset": 8,
+                "end_col_offset": 39,
+                "filename": "src\\sast\\sast_scan.py",
+                "issue_confidence": "HIGH",
+                "issue_cwe": {
+                    "id": 78,
+                    "link": "https://cwe.mitre.org/data/definitions/78.html"
+                },
+                "issue_severity": "LOW",
+                "issue_text": "subprocess call - check for execution of untrusted input.",
+                "line_number": 15,
+                "line_range": [
+                    15
+                ],
+                "more_info": "https://bandit.readthedocs.io/en/1.8.2/plugins/b603_subprocess_without_shell_equals_true.html",
+                "test_id": "B603",
+                "test_name": "subprocess_without_shell_equals_true"
+            }
+        ]
+    },
+    "sca_dependency_check": {
+        "reportSchema": "1.1",
+        "scanInfo": {
+            "engineVersion": "12.0.2",
+            "dataSource": [
+                {
+                    "name": "NVD API Last Checked",
+                    "timestamp": "2025-02-06T09:48:56+02"
+                },
+                {
+                    "name": "NVD API Last Modified",
+                    "timestamp": "2025-02-06T07:15:17Z"
+                }
+            ]
+        },
+        "projectInfo": {
+            "name": "",
+            "reportDate": "2025-02-06T08:15:20.769491Z",
+            "credits": {
+                "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
+                "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+                "NPM": "This report may contain data retrieved from the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
+                "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+                "OSSINDEX": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
+            }
+        },
+        "dependencies": []
+    },
+    "threat_modeling": "Threat Model: Secure SDLC Threat Model\n=================================\nDescription: Automatically generated threat model.\n\nEntities:\n\n  - External (Type: Boundary)\n\n  - Internal (Type: Boundary)\n\n  - Web Server (Type: Server)\n\n  - Database (Type: Datastore)\n\n  - External User (Type: Server)\n\n  - User sends request (Type: Dataflow)\n\n  - Web server queries database (Type: Dataflow)\n\n\nData Flows:\n\n\nThreats Identified:\n\n  -  | Severity: High | Category: Uncategorized | Description: Buffer Overflow via Environment Variables\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Overflow Buffers\n\n  -  | Severity: High | Category: Uncategorized | Description: Server Side Include (SSI) Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: Session Sidejacking\n\n  -  | Severity: High | Category: Uncategorized | Description: HTTP Request Splitting\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Cross Site Tracing\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Command Line Execution through SQL Injection\n\n  -  | Severity: Very High | Category: Uncategorized | Description: SQL Injection through SOAP Parameter Tampering\n\n  -  | Severity: High | Category: Uncategorized | Description: JSON Hijacking (aka JavaScript Hijacking)\n\n  -  | Severity: Medium | Category: Uncategorized | Description: API Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Authentication Abuse/ByPass\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Excavation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Interception\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Double Encoding\n\n  -  | Severity: High | Category: Uncategorized | Description: Exploit Test APIs\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Privilege Abuse\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Buffer Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Shared Data Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Flooding\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Path Traversal\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Subverting Environment Variable Values\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Excessive Allocation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Try All Common Switches\n\n  -  | Severity: High | Category: Uncategorized | Description: Format String Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: LDAP Injection\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Parameter Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: Relative Path Traversal\n\n  -  | Severity: High | Category: Uncategorized | Description: Client-side Injection-induced Buffer Overflow\n\n  -  | Severity: High | Category: Uncategorized | Description: XML Schema Poisoning\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XML Ping of the Death\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Content Spoofing\n\n  -  | Severity: High | Category: Uncategorized | Description: Command Delimiters\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Input Data Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Sniffing Attacks\n\n  -  | Severity: High | Category: Uncategorized | Description: Dictionary-based Password Attack\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Exploit Script-Based APIs\n\n  -  | Severity: Medium | Category: Uncategorized | Description: White Box Reverse Engineering\n\n  -  | Severity: Very Low | Category: Uncategorized | Description: Footprinting\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Using Malicious Files\n\n  -  | Severity: Low | Category: Uncategorized | Description: Web Application Fingerprinting\n\n  -  | Severity: Very High | Category: Uncategorized | Description: XSS Targeting Non-Script Elements\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Exploiting Incorrectly Configured Access Control Security Levels\n\n  -  | Severity: Medium | Category: Uncategorized | Description: IMAP/SMTP Command Injection\n\n  -  | Severity: Low | Category: Uncategorized | Description: Reverse Engineering\n\n  -  | Severity: High | Category: Uncategorized | Description: Embedding Scripts within Scripts\n\n  -  | Severity: High | Category: Uncategorized | Description: PHP Remote File Inclusion\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Principal Spoof\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Session Credential Falsification through Forging\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XML Entity Expansion\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XSS Targeting Error Pages\n\n  -  | Severity: High | Category: Uncategorized | Description: XSS Using Alternate Syntax\n\n  -  | Severity: Low | Category: Uncategorized | Description: Encryption Brute Forcing\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Manipulate Registry Information\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Lifting Sensitive Data Embedded in Cache\n\n  -  | Severity: High | Category: Uncategorized | Description: Removing Important Client Functionality\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using MIME Type Mismatch\n\n  -  | Severity: High | Category: Uncategorized | Description: Exploitation of Trusted Credentials\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Functionality Misuse\n\n  -  | Severity: Low | Category: Uncategorized | Description: Fuzzing and observing application log data/errors for application mapping\n\n  -  | Severity: High | Category: Uncategorized | Description: Communication Channel Manipulation\n\n  -  | Severity: High | Category: Uncategorized | Description: Exploiting Incorrectly Configured SSL\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XML Routing Detour Attacks\n\n  -  | Severity: High | Category: Uncategorized | Description: Exploiting Trust in Client\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Client-Server Protocol Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XML External Entities Blowup\n\n  -  | Severity: High | Category: Uncategorized | Description: iFrame Overlay\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Session Credential Falsification through Manipulation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: DTD Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: XML Attribute Blowup\n\n  -  | Severity: Very High | Category: Uncategorized | Description: File Content Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: XML Nested Payloads\n\n  -  | Severity: High | Category: Uncategorized | Description: Privilege Escalation\n\n  -  | Severity: Medium | Category: Uncategorized | Description: Hijacking a privileged process\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Catching exception throw/signal from privileged block\n\n  -  | Severity: High | Category: Uncategorized | Description: Filter Failure through Buffer Overflow\n\n  -  | Severity: High | Category: Uncategorized | Description: Resource Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: Code Injection\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XSS Targeting HTML Attributes\n\n  -  | Severity: High | Category: Uncategorized | Description: XSS Targeting URI Placeholders\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using Doubled Characters\n\n  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using Invalid Characters\n\n  -  | Severity: High | Category: Uncategorized | Description: Command Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: XML Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: Remote Code Inclusion\n\n  -  | Severity: High | Category: Uncategorized | Description: SOAP Array Overflow\n\n  -  | Severity: High | Category: Uncategorized | Description: Leverage Alternate Encoding\n\n  -  | Severity: High | Category: Uncategorized | Description: Audit Log Manipulation\n\n  -  | Severity: High | Category: Uncategorized | Description: Schema Poisoning\n\n  -  | Severity: Medium | Category: Uncategorized | Description: HTTP Response Smuggling\n\n  -  | Severity: High | Category: Uncategorized | Description: HTTP Request Smuggling\n\n  -  | Severity: Very High | Category: Uncategorized | Description: DOM-Based XSS\n\n  -  | Severity: High | Category: Uncategorized | Description: Session Credential Falsification through Prediction\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Reflected XSS\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Stored XSS\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Session Hijacking - ServerSide\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Session Hijacking - ClientSide\n\n  -  | Severity: High | Category: Uncategorized | Description: Argument Injection\n\n  -  | Severity: High | Category: Uncategorized | Description: Reusing Session IDs (aka Session Replay) - ServerSide\n\n  -  | Severity: High | Category: Uncategorized | Description: Reusing Session IDs (aka Session Replay) - ClientSide\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Cross Site Request Forgery\n\n  -  | Severity: Very High | Category: Uncategorized | Description: Data Leak\n\n  -  | Severity: High | Category: Uncategorized | Description: Unprotected Sensitive Data\n\n  -  | Severity: High | Category: Uncategorized | Description: Credentials Aging\n"
+}

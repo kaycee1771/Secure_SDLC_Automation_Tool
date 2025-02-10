@@ -1,0 +1,231 @@
+Threat Model: Secure SDLC Threat Model
+=================================
+Description: Automatically generated threat model.
+
+Entities:
+
+  - External (Type: Boundary)
+
+  - Internal (Type: Boundary)
+
+  - Web Server (Type: Server)
+
+  - Database (Type: Datastore)
+
+  - External User (Type: Server)
+
+  - User sends request (Type: Dataflow)
+
+  - Web server queries database (Type: Dataflow)
+
+
+Data Flows:
+
+
+Threats Identified:
+
+  -  | Severity: High | Category: Uncategorized | Description: Buffer Overflow via Environment Variables
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Overflow Buffers
+
+  -  | Severity: High | Category: Uncategorized | Description: Server Side Include (SSI) Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: Session Sidejacking
+
+  -  | Severity: High | Category: Uncategorized | Description: HTTP Request Splitting
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Cross Site Tracing
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Command Line Execution through SQL Injection
+
+  -  | Severity: Very High | Category: Uncategorized | Description: SQL Injection through SOAP Parameter Tampering
+
+  -  | Severity: High | Category: Uncategorized | Description: JSON Hijacking (aka JavaScript Hijacking)
+
+  -  | Severity: Medium | Category: Uncategorized | Description: API Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Authentication Abuse/ByPass
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Excavation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Interception
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Double Encoding
+
+  -  | Severity: High | Category: Uncategorized | Description: Exploit Test APIs
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Privilege Abuse
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Buffer Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Shared Data Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Flooding
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Path Traversal
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Subverting Environment Variable Values
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Excessive Allocation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Try All Common Switches
+
+  -  | Severity: High | Category: Uncategorized | Description: Format String Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: LDAP Injection
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Parameter Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: Relative Path Traversal
+
+  -  | Severity: High | Category: Uncategorized | Description: Client-side Injection-induced Buffer Overflow
+
+  -  | Severity: High | Category: Uncategorized | Description: XML Schema Poisoning
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XML Ping of the Death
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Content Spoofing
+
+  -  | Severity: High | Category: Uncategorized | Description: Command Delimiters
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Input Data Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Sniffing Attacks
+
+  -  | Severity: High | Category: Uncategorized | Description: Dictionary-based Password Attack
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Exploit Script-Based APIs
+
+  -  | Severity: Medium | Category: Uncategorized | Description: White Box Reverse Engineering
+
+  -  | Severity: Very Low | Category: Uncategorized | Description: Footprinting
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Using Malicious Files
+
+  -  | Severity: Low | Category: Uncategorized | Description: Web Application Fingerprinting
+
+  -  | Severity: Very High | Category: Uncategorized | Description: XSS Targeting Non-Script Elements
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Exploiting Incorrectly Configured Access Control Security Levels
+
+  -  | Severity: Medium | Category: Uncategorized | Description: IMAP/SMTP Command Injection
+
+  -  | Severity: Low | Category: Uncategorized | Description: Reverse Engineering
+
+  -  | Severity: High | Category: Uncategorized | Description: Embedding Scripts within Scripts
+
+  -  | Severity: High | Category: Uncategorized | Description: PHP Remote File Inclusion
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Principal Spoof
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Session Credential Falsification through Forging
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XML Entity Expansion
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XSS Targeting Error Pages
+
+  -  | Severity: High | Category: Uncategorized | Description: XSS Using Alternate Syntax
+
+  -  | Severity: Low | Category: Uncategorized | Description: Encryption Brute Forcing
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Manipulate Registry Information
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Lifting Sensitive Data Embedded in Cache
+
+  -  | Severity: High | Category: Uncategorized | Description: Removing Important Client Functionality
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using MIME Type Mismatch
+
+  -  | Severity: High | Category: Uncategorized | Description: Exploitation of Trusted Credentials
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Functionality Misuse
+
+  -  | Severity: Low | Category: Uncategorized | Description: Fuzzing and observing application log data/errors for application mapping
+
+  -  | Severity: High | Category: Uncategorized | Description: Communication Channel Manipulation
+
+  -  | Severity: High | Category: Uncategorized | Description: Exploiting Incorrectly Configured SSL
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XML Routing Detour Attacks
+
+  -  | Severity: High | Category: Uncategorized | Description: Exploiting Trust in Client
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Client-Server Protocol Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XML External Entities Blowup
+
+  -  | Severity: High | Category: Uncategorized | Description: iFrame Overlay
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Session Credential Falsification through Manipulation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: DTD Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: XML Attribute Blowup
+
+  -  | Severity: Very High | Category: Uncategorized | Description: File Content Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: XML Nested Payloads
+
+  -  | Severity: High | Category: Uncategorized | Description: Privilege Escalation
+
+  -  | Severity: Medium | Category: Uncategorized | Description: Hijacking a privileged process
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Catching exception throw/signal from privileged block
+
+  -  | Severity: High | Category: Uncategorized | Description: Filter Failure through Buffer Overflow
+
+  -  | Severity: High | Category: Uncategorized | Description: Resource Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: Code Injection
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XSS Targeting HTML Attributes
+
+  -  | Severity: High | Category: Uncategorized | Description: XSS Targeting URI Placeholders
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using Doubled Characters
+
+  -  | Severity: Medium | Category: Uncategorized | Description: XSS Using Invalid Characters
+
+  -  | Severity: High | Category: Uncategorized | Description: Command Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: XML Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: Remote Code Inclusion
+
+  -  | Severity: High | Category: Uncategorized | Description: SOAP Array Overflow
+
+  -  | Severity: High | Category: Uncategorized | Description: Leverage Alternate Encoding
+
+  -  | Severity: High | Category: Uncategorized | Description: Audit Log Manipulation
+
+  -  | Severity: High | Category: Uncategorized | Description: Schema Poisoning
+
+  -  | Severity: Medium | Category: Uncategorized | Description: HTTP Response Smuggling
+
+  -  | Severity: High | Category: Uncategorized | Description: HTTP Request Smuggling
+
+  -  | Severity: Very High | Category: Uncategorized | Description: DOM-Based XSS
+
+  -  | Severity: High | Category: Uncategorized | Description: Session Credential Falsification through Prediction
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Reflected XSS
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Stored XSS
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Session Hijacking - ServerSide
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Session Hijacking - ClientSide
+
+  -  | Severity: High | Category: Uncategorized | Description: Argument Injection
+
+  -  | Severity: High | Category: Uncategorized | Description: Reusing Session IDs (aka Session Replay) - ServerSide
+
+  -  | Severity: High | Category: Uncategorized | Description: Reusing Session IDs (aka Session Replay) - ClientSide
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Cross Site Request Forgery
+
+  -  | Severity: Very High | Category: Uncategorized | Description: Data Leak
+
+  -  | Severity: High | Category: Uncategorized | Description: Unprotected Sensitive Data
+
+  -  | Severity: High | Category: Uncategorized | Description: Credentials Aging
